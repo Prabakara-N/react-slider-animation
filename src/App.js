@@ -19,19 +19,15 @@ const App = () => {
     };
   }, [index]);
 
-  useEffect(
-    () => {
-      if (index > people.length - 1) {
-        setIndex(0);
-      }
+  useEffect(() => {
+    if (index > people.length - 1) {
+      setIndex(0);
+    }
 
-      if (index < 0) {
-        setIndex(people.length - 1);
-      }
-    },
-    [index],
-    people
-  );
+    if (index < 0) {
+      setIndex(people.length - 1);
+    }
+  }, [index, people]);
 
   return (
     <div className="main">
