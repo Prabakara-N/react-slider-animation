@@ -27,7 +27,7 @@ const App = () => {
     if (index < 0) {
       setIndex(people.length - 1);
     }
-  }, [index]);
+  }, [index, people.length]);
 
   return (
     <div className="main">
